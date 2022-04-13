@@ -20,6 +20,14 @@ public class Message {
 	
 	@Column  
 	private String email;
+	
+	public Message() {}
+	
+	public Message(int id, String content, String email) {
+		this.id= id;
+		this.content = content;
+		this.email = email;
+	}
 
 	public int getId() {
 		return id;

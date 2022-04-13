@@ -22,6 +22,14 @@ public class Reaction {
 	@Column  
 	private String email;
 
+	public Reaction() {}
+
+	public Reaction(int msgId, String emo, String email) {
+		this.msgId = msgId;
+		this.emo = emo;
+		this.email = email;
+	}
+	
 	public String getEmail() {
 		return email;
 	}

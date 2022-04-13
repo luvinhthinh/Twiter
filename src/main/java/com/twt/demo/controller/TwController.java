@@ -28,8 +28,7 @@ public class TwController {
 	private int saveMessage(@RequestBody Message message)   
 	{  
 		if(valService.validate(message)) {
-			twService.saveMessage(message);  
-			return message.getId(); 
+			return twService.saveMessage(message);  
 		}
 		return -1;
 		 
@@ -39,8 +38,7 @@ public class TwController {
 	private int saveReaction(@RequestBody Reaction reaction)   
 	{  
 		if(valService.validate(reaction)) {
-			twService.saveReaction(reaction);
-			return reaction.getMsgId(); 
+			return twService.saveReaction(reaction);
 		}
 		return -1;
 		 

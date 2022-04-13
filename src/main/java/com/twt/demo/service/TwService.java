@@ -25,12 +25,14 @@ public class TwService {
 	@Autowired  
 	EmoRepository emoRepository; 
 	
-	public void saveMessage(Message message){  
-		messageRepository.save(message);  
+	public int saveMessage(Message message){  
+		Message msg = messageRepository.save(message);  
+		return msg.getId();
 	}  
 	
-	public void saveReaction(Reaction reaction) {
-		reactionRepository.save(reaction);
+	public int saveReaction(Reaction reaction) {
+		Reaction react = reactionRepository.save(reaction);
+		return react.getMsgId();
 	}
 	
 	public List<Emo> getAllEmo(){  
