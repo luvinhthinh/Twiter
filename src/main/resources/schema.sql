@@ -17,6 +17,5 @@ CREATE TABLE REACTION (
 	msgid INT NOT NULL,  
 	emo VARCHAR(8) NOT NULL,
 	email VARCHAR(32) NOT NULL,
-	foreign key (msgid) references MESSAGE(id),
-	foreign key (emo) references EMO(code)
+	foreign key (msgid) references MESSAGE(id)
 );  

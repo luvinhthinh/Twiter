@@ -2,11 +2,13 @@ package com.twt.demo.model;
 
 import javax.persistence.Column;  
 import javax.persistence.Entity;
-import javax.persistence.Id;  
+import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;  
 
 @Entity  
 @Table 
+@IdClass(ReactionId.class)
 public class Reaction {
 	
 	@Id
@@ -16,6 +18,7 @@ public class Reaction {
 	@Column  
 	private String emo;  
 	
+	@Id
 	@Column  
 	private String email;
 

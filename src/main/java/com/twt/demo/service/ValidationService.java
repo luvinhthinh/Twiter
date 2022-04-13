@@ -27,7 +27,7 @@ public class ValidationService {
 	
 	public boolean validate(Reaction reaction){  
 		return reaction != null &&
-				checkIfReactionExist(reaction.getEmo()) &&
+//				checkIfReactionExist(reaction.getEmo()) &&
 				checkIfMessageExist(reaction.getMsgId()) &&
 						checkEmail(reaction.getEmail());
 	}
